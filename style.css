@@ -61,8 +61,20 @@ h1 {
   color: #0077cc;
 }
 
-.content {
+@font-face {
+    font-family: 'NeoSansLocal';
+    src: url('alfont_com_NeoSansW23-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+.new-logo {
+    font-family: 'NeoSansLocal', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    /* لو الخط Bold أصلاً، ما تضيفش font-weight:bold */
+}
+
 
 .doctor-info {
   background: #fff;
