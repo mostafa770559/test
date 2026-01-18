@@ -631,3 +631,21 @@ background-color: #0056b3 !important;
  height: 150px; 
 }
 }
+
+/* إصلاح الصورة على الموبايل */
+@media (max-width: 768px) {
+  .doctor-photo {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    margin: -80px auto 20px auto !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  .doctor-info {
+    margin-top: 100px !important;
+    padding-top: 40px !important;
+  }
+}
