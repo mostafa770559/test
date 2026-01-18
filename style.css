@@ -521,23 +521,32 @@ color: #0077cc;
 }
 
 /* على الشاشات الكبيرة (كمبيوتر) نعرض فقط 3 */
-@media (min-width: 768px) {
-  .testimonial-card {
-    display: none;
-  }
+/* عرض جميع التعليقات */
+.testimonial-card {
+  display: block !important;
+}
 
-  .testimonial-card:nth-child(1),
-  .testimonial-card:nth-child(2),
-  .testimonial-card:nth-child(3) {
-    display: block;
-  }
-
-    .testimonial-card:nth-child(4),
-  .testimonial-card:nth-child(5),
-  .testimonial-card:nth-child(6) {
-    display: block;
+/* للهاتف: تعليق واحد في كل سطر */
+@media (max-width: 767px) {
+  .testimonial-gallery {
+    grid-template-columns: 1fr !important;
   }
 }
+
+/* للتابلت: تعليقين في كل سطر */
+@media (min-width: 768px) and (max-width: 991px) {
+  .testimonial-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* للكمبيوتر: 3 تعليقات في كل سطر */
+@media (min-width: 992px) {
+  .testimonial-gallery {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 
 .testimonial-gallery {
   display: grid;
